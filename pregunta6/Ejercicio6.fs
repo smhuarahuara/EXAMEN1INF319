@@ -24,7 +24,7 @@ let main argv =
     let valor2 = Convert.ToInt32(num2)
     if piv=1 then Console.WriteLine("La suma de "+num1+" y "+num2+" es igual a: "+(suma valor1 valor2).ToString()) 
     if piv=2 then Console.WriteLine("La resta de "+num1+" y "+num2+" es igual a: "+(resta valor1 valor2).ToString()) 
-    if piv=3 then Console.WriteLine("La multupliacion de "+num1+" y "+num2+" es igual a: "+(multiplicacion valor1 valor2).ToString()) 
+    if piv=3 then Console.WriteLine("La multipliacion de "+num1+" y "+num2+" es igual a: "+(multiplicacion valor1 valor2).ToString()) 
     if piv=4 then Console.WriteLine("La division de "+num1+" y "+num2+" es igual a: "+(division valor1 valor2).ToString()) 
      
      
