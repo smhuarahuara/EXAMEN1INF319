@@ -1,0 +1,125 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApplication1
+{
+    public partial class Form1 : Form
+    {
+        int valor, valor2;
+        int sum=0, res=0, mult=0, div=0;
+        public Form1()
+        {
+            InitializeComponent();
+            valor = 0;
+            valor2 = 0;
+        }
+        private int suma(int a, int b)
+        {
+            return a + b;
+        }
+        private int resta(int a, int b)
+        {
+            return a - b;
+        }
+        private int mul(int a, int b)
+        {
+            return a * b;
+        }
+        private int divison(int a, int b)
+        {
+            return a / b;
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            valor = valor * 10 + Convert.ToInt32(((Button)sender).Text);
+            textBox1.Text = valor.ToString();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            valor = 0;
+            valor2 = 0;
+            textBox1.Text = "0";
+            textBox2.Text = "";
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            valor2 = valor;
+            valor = 0;
+            textBox2.Text = valor2.ToString()+"+";
+            textBox1.Text ="0";
+            sum = 1; res = 0; mult = 0; div = 0;
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            if(sum==1)
+            {
+                valor = suma(valor, valor2);
+                textBox2.Text = textBox2.Text+textBox1.Text+"=";
+                textBox1.Text = valor.ToString();
+            }
+            if (res == 1)
+            {
+                valor = resta(valor2, valor);
+                textBox2.Text = textBox2.Text + textBox1.Text + "=";
+                textBox1.Text = valor.ToString();
+            }
+            if (mult == 1)
+            {
+                valor = mul(valor, valor2);
+                textBox2.Text = textBox2.Text + textBox1.Text + "=";
+                textBox1.Text = valor.ToString();
+            }
+            if (div == 1)
+            {
+                valor = divison(valor2, valor);
+                textBox2.Text = textBox2.Text + textBox1.Text + "=";
+                textBox1.Text = valor.ToString();
+            }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            valor2 = valor;
+            valor = 0;
+            textBox2.Text = valor2.ToString() + "-";
+            textBox1.Text = "0";
+            sum = 0; res = 1; mult = 0; div = 0;
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            valor2 = valor;
+            valor = 0;
+            textBox2.Text = valor2.ToString() + "*";
+            textBox1.Text = "0";
+            sum = 0; res = 0; mult = 1; div = 0;
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            valor2 = valor;
+            valor = 0;
+            textBox2.Text = valor2.ToString() + "/";
+            textBox1.Text = "0";
+            sum = 0; res = 0; mult = 0; div = 1;
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            valor = valor / 10;
+            textBox1.Text = valor.ToString();
+        }
+
+        
+    }
+}
