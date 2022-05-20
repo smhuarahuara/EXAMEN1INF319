@@ -1,0 +1,12 @@
+numero=c("A",2:10,"J","Q","K")
+numero=rep(numero,4)
+simbolo=c("corazon","trebol","diamante","espada")
+simbolo=c(rep(simbolo[1],13),rep(simbolo[2],13),rep(simbolo[3],13),rep(simbolo[4],13))
+color=c("rojo","negro")
+color=c(rep(color[1],13),rep(color[2],13),rep(color[1],13),rep(color[2],13))
+baraja<-data.frame(
+"numero"=numero,
+"simbolo"=simbolo,
+"color"=color
+)
+print(baraja)
